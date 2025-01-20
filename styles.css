@@ -272,7 +272,7 @@ body {
   font-weight: 500;
 }
 
-/* Add hover animation for timeline items */
+/* Hover animation for timeline items */
 @keyframes fadeInLeft {
   from {
     opacity: 0;
@@ -342,7 +342,6 @@ body {
   font-weight: 500;
 }
 
-/* Add to your styles.css */
 .project-card.hidden {
   display: none;
 }
@@ -452,172 +451,6 @@ body {
   opacity: 1;
 }
 
-/* Coursework  Section*/
-#coursework {
-  padding: var(--spacing-lg) 0;
-  background-color: #f8fafc;
-}
-
-.course-grid {
-  display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
-  gap: 2rem;
-  margin-top: 2rem;
-}
-
-.course-card {
-  background: white;
-  border-radius: 12px;
-  padding: 1.5rem;
-  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
-  transition: transform 0.3s ease;
-}
-
-.course-card:hover {
-  transform: translateY(-5px);
-}
-
-.course-semester {
-  font-size: 1.2rem;
-  font-weight: 600;
-  color: var(--color-primary);
-  margin-bottom: 1rem;
-  padding-bottom: 0.5rem;
-  border-bottom: 2px solid rgba(37, 99, 235, 0.1);
-}
-
-.course-list {
-  display: flex;
-  flex-direction: column;
-  gap: 1rem;
-}
-
-.course-item {
-  display: flex;
-  flex-direction: column;
-  gap: 0.2rem;
-}
-
-.course-code {
-  font-weight: 600;
-  color: var(--color-text);
-  font-size: 0.9rem;
-}
-
-.course-name {
-  color: var(--color-text-light);
-  font-size: 0.9rem;
-  line-height: 1.4;
-}
-
-/* Hover Effect */
-.course-item {
-  padding: 0.5rem;
-  border-radius: 6px;
-  transition: background-color 0.2s ease;
-}
-
-.course-item:hover {
-  background-color: rgba(37, 99, 235, 0.05);
-}
-
-/* Coursework Animations */
-@keyframes fadeInUp {
-  from {
-    opacity: 0;
-    transform: translateY(20px);
-  }
-
-  to {
-    opacity: 1;
-    transform: translateY(0);
-  }
-}
-
-.course-card {
-  animation: fadeInUp 0.5s ease forwards;
-  opacity: 0;
-}
-
-.course-card:nth-child(1) {
-  animation-delay: 0.1s;
-}
-
-.course-card:nth-child(2) {
-  animation-delay: 0.2s;
-}
-
-.course-card:nth-child(3) {
-  animation-delay: 0.3s;
-}
-
-.institution-tabs {
-  display: flex;
-  justify-content: center;
-  gap: 1rem;
-  margin-bottom: 2rem;
-}
-
-.tab-btn {
-  padding: 0.8rem 1.5rem;
-  border: none;
-  background: none;
-  border-radius: 8px;
-  font-size: 1rem;
-  font-weight: 500;
-  color: var(--color-text-light);
-  cursor: pointer;
-  transition: all 0.3s ease;
-  position: relative;
-}
-
-.tab-btn::after {
-  content: '';
-  position: absolute;
-  bottom: -4px;
-  left: 0;
-  width: 100%;
-  height: 2px;
-  background-color: var(--color-primary);
-  transform: scaleX(0);
-  transition: transform 0.3s ease;
-}
-
-.tab-btn.active {
-  color: var(--color-primary);
-}
-
-.tab-btn.active::after {
-  transform: scaleX(1);
-}
-
-.course-container {
-  opacity: 1;
-  transition: opacity 0.3s ease;
-}
-
-.course-container.hidden {
-  display: none;
-  opacity: 0;
-}
-
-/* Animation for course containers */
-@keyframes slideIn {
-  from {
-    opacity: 0;
-    transform: translateX(20px);
-  }
-
-  to {
-    opacity: 1;
-    transform: translateX(0);
-  }
-}
-
-.course-container:not(.hidden) {
-  animation: slideIn 0.5s ease forwards;
-}
-
 /* Footer */
 footer {
   padding: 2rem 0;
@@ -649,4 +482,34 @@ footer {
 .footer-text {
   color: var(--color-text-light);
   font-size: 0.9rem;
+}
+
+.coursework-container {
+  max-width: 800px;
+  margin: 0 auto;
+  padding: 7rem var(--spacing-md) 2rem;
+  font-size: 0.9rem;
+}
+
+.coursework-intro {
+  margin-bottom: 2rem;
+}
+
+.semester {
+  margin-bottom: 1.5rem;
+}
+
+.semester h3 {
+  font-style: italic;
+  margin-bottom: 0.5rem;
+}
+
+.semester ul {
+  list-style: none;
+  padding-left: 0;
+}
+
+.semester li {
+  margin-bottom: 0.3rem;
+  line-height: 1.2;
 }

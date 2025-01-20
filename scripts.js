@@ -14,31 +14,7 @@ backToTop.addEventListener('click', (e) => {
   window.scrollTo({ top: 0, behavior: 'smooth' });
 });
 
-// Tab functionality
-document.addEventListener('DOMContentLoaded', () => {
-  const tabBtns = document.querySelectorAll('.tab-btn');
-  const courseContainers = document.querySelectorAll('.course-container');
-
-  tabBtns.forEach(btn => {
-    btn.addEventListener('click', () => {
-      // Remove active class from all buttons
-      tabBtns.forEach(b => b.classList.remove('active'));
-      // Add active class to clicked button
-      btn.classList.add('active');
-
-      // Hide all course containers
-      courseContainers.forEach(container => {
-        container.classList.add('hidden');
-      });
-
-      // Show selected container
-      const targetId = `${btn.dataset.tab}-courses`;
-      document.getElementById(targetId).classList.remove('hidden');
-    });
-  });
-});
-
-// Add this JavaScript
+// Show more for projects 
 document.addEventListener('DOMContentLoaded', () => {
   const showMoreBtn = document.querySelector('.show-more-btn');
   const hiddenProjects = document.querySelectorAll('.project-card.hidden');
