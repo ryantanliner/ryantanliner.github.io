@@ -108,7 +108,6 @@ body {
 
 .hero-content .title {
   font-size: 1.5rem;
-  color: var(--color-text-light);
   margin-bottom: var(--spacing-md);
   animation: fadeIn 1s ease 0.2s backwards;
 }
@@ -487,7 +486,7 @@ footer {
 .coursework-container {
   max-width: 800px;
   margin: 0 auto;
-  padding: 7rem var(--spacing-md) 2rem;
+  padding: 2rem;
   font-size: 0.9rem;
 }
 
@@ -512,4 +511,26 @@ footer {
 .semester li {
   margin-bottom: 0.3rem;
   line-height: 1.2;
+}
+
+/* Home button in coursework page */
+.home-btn {
+  position: fixed;
+  top: 2rem;
+  left: 2rem;
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+  text-decoration: none;
+  color: var(--color-text);
+  font-size: 0.9rem;
+  padding: 0.8rem 1.2rem;
+  border: 1px solid var(--color-text);
+  border-radius: 4px;
+  transition: all 0.3s ease;
+}
+
+.home-btn:hover {
+  background: var(--color-text);
+  color: white;
 }
